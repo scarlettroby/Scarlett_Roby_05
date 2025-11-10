@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Programs</title>
+</head>
+<body>
+    <h2>JavaScript Programs</h2>
+    <script>
+        let num = parseInt(prompt("Enter a number:"));
+
+        document.write("<h3><b>1. Multiplication Table of " + num + "</b></h3>");
+        for (let i = 1; i <= 10; i++) {
+            document.write(num + " x " + i + " = " + (num * i) + "<br>");
+        }
+
+        let temp = num;
+        let sum = 0;
+        while (temp > 0) {
+            sum += temp % 10;
+            temp = Math.floor(temp / 10);
+        }
+        document.write("<h3><b>2. Sum of Digits</b></h3>");
+        document.write("Sum of digits of " + num + " is: " + sum + "<br>");
+
+        let arr = [2, 5, 7, 10, 15, 20, num];
+        document.write("<h3><b>3. Searching a Number in a List</b></h3>");
+        document.write("List Elements: [" + arr.join(", ") + "]<br>");
+        let found = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === num) {
+                found = true;
+                document.write(num + " found at index " + i + "<br>");
+                break;
+            }
+        }
+        if (!found) {
+            document.write(num + " not found in the list.<br>");
+        }
+
+        document.write("<h3><b>4. Numbers from 1–20 (Skipping Multiples of 5)</b></h3>");
+        for (let i = 1; i <= 20; i++) {
+            if (i % 5 === 0) continue;
+            document.write(i + " ");
+        }
+
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        document.write("<h3><b>5. Factorial</b></h3>");
+        document.write("Factorial of " + num + " is: " + factorial(num) + "<br>");
+
+        function isEven(n) {
+            return n % 2 === 0;
+        }
+        document.write("<h3><b>6. Even or Odd</b></h3>");
+        document.write(num + " is " + (isEven(num) ? "even" : "odd") + "<br>");
+
+        document.write("<h3><b>7. Even Numbers from 1–50 (Using while loop)</b></h3>");
+        let i = 1;
+        while (i <= 50) {
+            if (i % 2 === 0) {
+                document.write(i + " ");
+            }
+            i++;
+        }
+
+        document.write("<h3><b>8. Largest Among 3 Numbers</b></h3>");
+        let a = parseInt(prompt("Enter first number:"));
+        let b = parseInt(prompt("Enter second number:"));
+        let c = parseInt(prompt("Enter third number:"));
+        let largest = a;
+        if (b > largest) largest = b;
+        if (c > largest) largest = c;
+        document.write("The largest number among " + a + ", " + b + ", and " + c + " is: " + largest + "<br>");
+    </script>
+</body>
+</html>
+ 
