@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --beige: #f5f0e6;
+  --dark-brown: #3b2f2f;
+  --accent: #a47c48;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: var(--beige);
+  color: var(--dark-brown);
+  line-height: 1.7;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--dark-brown);
+  color: var(--beige);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--accent);
+}
+
+section {
+  padding: 2rem;
+}
+
+/* Book Cards */
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.book-card {
+  background-color: var(--beige);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1 1 220px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--dark-brown);
+}
+
+/* Shelves */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-item {
+  background-color: var(--beige);
+  border: 1px solid var(--accent);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Book List */
+.books-list {
+  list-style: square inside;
+  padding: 1.5rem;
+  background-color: var(--dark-brown);
+  color: var(--beige);
+  border-radius: 6px;
+  margin: 2rem;
+}
+
+/* Table */
+table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: var(--beige);
+  text-align: center;
+}
+
+table th, table td {
+  border: 1px solid var(--accent);
+  padding: 0.8rem;
+}
+
+table caption {
+  font-weight: bold;
+  color: var(--dark-brown);
+  margin-bottom: 0.5rem;
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--beige);
+  padding: 1.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--dark-brown);
+}
+
+button {
+  padding: 0.6rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #8c653a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--dark-brown);
+  color: var(--beige);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Library</h1>
+  <p>Classic . timeless . elegant</p>
+</header>
+
+<section class="flex-section">
+  <div class="book-card"><h3>Book One</h3><p>Learn about the classics .</p></div>
+  <div class="book-card"><h3>Book Two</h3><p>Rich tales from old Europe.</p></div>
+  <div class="book-card"><h3>Book Three</h3><p>History and heritage in print.</p></div>
+</section>
+
+<section class="grid-section">
+  <div class="grid-item">Shelf A</div>
+  <div class="grid-item">Shelf B</div>
+  <div class="grid-item">Shelf C</div>
+  <div class="grid-item">Shelf D</div>
+</section>
+
+<ul class="books-list">
+  <li>The Great Gatsby</li>
+  <li>Pride and Prejudice</li>
+  <li>Moby Dick</li>
+  <li>1984</li>
+</ul>
+
+<table>
+  <caption>Library Books</caption>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Year</th>
+  </tr>
+  <tr>
+    <td>Sherlock Holmes</td>
+    <td>Arthur Conan Doyle</td>
+    <td>1887</td>
+  </tr>
+  <tr>
+    <td>War and Peace</td>
+    <td>Leo Tolstoy</td>
+    <td>1869</td>
+  </tr>
+  <tr>
+    <td>Jane Eyre</td>
+    <td>Charlotte Brontë</td>
+    <td>1847</td>
+  </tr>
+</table>
+
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name" placeholder="Your Name">
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="you@example.com">
+  <label for="message">Message</label>
+  <textarea id="message" rows="4" placeholder="Your message"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<footer>
+  &copy; 2025 Library
+</footer>
+
+</body>
+</html>
