@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>My Playlist</title>
+<style>
+:root{
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#071826;
+  background-image: linear-gradient(180deg,#071826 0%, #041219 100%);
+  background-attachment: fixed;
+  color:#e6f7ff;
+  line-height:1.4;
+  margin:0;
+  padding:20px;
+}
+.container{
+  max-width:900px;
+  min-width:280px;
+  margin:24px auto;
+  padding:18px;
+}
+.header{
+  text-align:center;
+  padding:14px;
+  border-radius:10px;
+  background-image: radial-gradient(circle at 15% 10%, rgba(125,211,252,0.06), transparent),
+  linear-gradient(90deg, rgba(125,211,252,0.03), transparent);
+  background-blend-mode:multiply;
+  background-size:cover;
+}
+h1{
+  font-size:24px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  word-spacing:4px;
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+  margin:0 0 6px 0;
+  background-image: linear-gradient(90deg,#9be7ff,#7dd3fc);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.subtitle{
+  margin:0;
+  font-size:13px;
+  color:var(--muted);
+  font-style:italic;
+  text-decoration:underline;
+}
+.playlist{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-height:60vh;
+  overflow-y:auto;
+}
+.song{
+  display:block;
+  background-color: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:10px;
+  padding:12px;
+  min-height:72px;
+  width:100%;
+  box-shadow:0 2px 6px rgba(0,0,0,0.5);
+  transition:transform .14s, box-shadow .14s;
+  cursor:pointer;
+  overflow:hidden;
+}
+.song:hover{ transform:translateY(-4px); box-shadow:0 10px 20px rgba(0,0,0,0.6); }
+.song:focus{ outline:3px solid rgba(125,211,252,0.12); }
+.thumb{
+  width:72px;
+  height:72px;
+  float:left;
+  margin-right:12px;
+  border-radius:6px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  box-shadow:0 6px 12px rgba(0,0,0,0.5);
+}
+.info{ overflow:hidden; }
+.title{ font-size:16px; font-weight:600; margin:0 0 6px 0; color:#eaf8ff; text-align:left; }
+.artist{ margin:0 0 8px 0; font-size:13px; color:var(--muted); font-style:italic; }
+.controls{ display:flex; gap:8px; align-items:center; }
+.play{
+  padding:6px 10px;
+  border-radius:8px;
+  border:none;
+  background:transparent;
+  color:var(--accent);
+  font-weight:600;
+  cursor:default;
+}
+audio{ width:100%; margin-top:8px; max-height:48px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>My Playlist</h1>
+    <p class="subtitle">piece · of · heaven</p>
+  </div>
+
+  <div class="playlist" id="playlist">
+
+    <div class="song" tabindex="0">
+      <div class="thumb" style="background-image: url('HC.png');"></div>
+      <div class="info">
+        <h3 class="title">Hotel California</h3>
+        <p class="artist">The Eagles</p>
+        <div class="controls">
+          <span class="play">Play</span>
+          <audio controls>
+            <source src="Hotelcalifornia.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="song" tabindex="0">
+      <div class="thumb" style="background-image: url('CD.jpg');"></div>
+      <div class="info">
+        <h3 class="title">California dreamin'</h3>
+        <p class="artist">The Mamas and the Papas</p>
+        <div class="controls">
+          <span class="play">Play</span>
+          <audio controls>
+            <source src="CaliforniaDreamin'.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="song" tabindex="0">
+      <div class="thumb" style="background-image: url('CN.jpeg');"></div>
+      <div class="info">
+        <h3 class="title">Comfortably Numb</h3>
+        <p class="artist">Pink Floyd</p>
+        <div class="controls">
+          <span class="play">Play</span>
+          <audio controls>
+            <source src="Comfortably_Numb.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
