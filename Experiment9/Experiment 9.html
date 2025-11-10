@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operators in JS</title>
+</head>
+<body>
+    <h1>Operators in JS</h1>
+    <script>
+        let a = 10;
+        let b = 20;
+
+        document.write("<b>Arithmetic Operators:</b><br>");
+        document.write("a + b = " + (a + b) + "<br>");
+        document.write("a - b = " + (a - b) + "<br>");
+        document.write("a * b = " + (a * b) + "<br>");
+        document.write("b / a = " + (b / a) + "<br>");
+        document.write("b % a = " + (b % a) + "<br><br>");
+
+
+        document.write("<b>Comparison Operators:</b><br>");
+        document.write("a == b: " + (a == b) + "<br>");   
+        document.write("a != b: " + (a != b) + "<br>");
+        document.write("a < b: " + (a < b) + "<br>");
+        document.write("a > b: " + (a > b) + "<br>");
+        document.write("a <= b: " + (a <= b) + "<br>");
+        document.write("a >= b: " + (a >= b) + "<br><br>");
+
+
+        document.write("<b>Logical Operators:</b><br>");
+        let x = 10;
+        let y = 20;
+
+        document.write("(x > 5 && y > 15): " + (x > 5 && y > 15) + "<br>"); 
+        document.write("(x > 15 || y > 15): " + (x > 15 || y > 15) + "<br>"); 
+        document.write("!(x == y): " + !(x == y) + "<br><br>"); 
+
+        document.write("<b>Ternary Operator:</b><br>");
+        let num = 15;
+        let result = (num % 2 === 0) ? "Even" : "Odd";
+        document.write("The number " + num + " is " + result + "<br><br>");
+        
+</script>
+</body>
+</html>
